@@ -18,7 +18,7 @@ resource "digitalocean_record" "console" {
 }
 
 resource "digitalocean_record" "master" {
-  count  = "${var.droplet_count}"
+  count  = "${var.master_count}"
   domain = "${var.base_domain}"
   name   = "${var.cluster_name}-master-${count.index}"
   type   = "A"
